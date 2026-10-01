@@ -1,0 +1,10 @@
+[Unit]
+Description=Scrape data sources and rebuild the DuckDB warehouse
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=chegeh
+WorkingDirectory=/home/chegeh/projects/personal-stack
+ExecStart=/home/chegeh/projects/personal-stack/run_pipeline.sh

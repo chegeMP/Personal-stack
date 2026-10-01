@@ -1,0 +1,19 @@
+name: personal_stack
+version: '1.0.0'
+config-version: 2
+profile: personal_stack
+
+model-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+target-path: "target"
+
+vars:
+  # Relative to transform/, where dbt is run from.
+  raw_dir: ../data/raw
+
+models:
+  personal_stack:
+    +materialized: table

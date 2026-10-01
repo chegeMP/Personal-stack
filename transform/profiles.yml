@@ -1,0 +1,9 @@
+personal_stack:
+  outputs:
+    dev:
+      type: duckdb
+      path: '../warehouse.duckdb'
+      threads: 4
+      timeout_seconds: 300
+
+  target: dev

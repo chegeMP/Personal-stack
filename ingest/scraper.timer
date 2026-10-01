@@ -1,0 +1,10 @@
+[Unit]
+Description=Run the scrape pipeline daily at 02:00
+
+[Timer]
+OnCalendar=*-*-* 02:00:00
+# Run on the next boot if the machine was off at 02:00.
+Persistent=true
+
+[Install]
+WantedBy=timers.target
